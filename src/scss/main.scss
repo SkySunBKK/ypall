@@ -12,7 +12,18 @@
 // ==== 4. Components ====
 @use 'components/button';
 @use 'components/card';
-
+@use 'components/advantage';
+@use 'components/footer';
+@use 'components/header';
+@use 'components/feedback';
+@use 'components/modal_window';
+@use 'components/gallery';
+@use 'components/hero_banner';
+@use 'components/theme';
+@use 'components/page_one';
+@use 'components/page_two';
+@use 'components/page_three';
+@use 'components/page_four';
 body {
   background-color: var(--main-color);
 }

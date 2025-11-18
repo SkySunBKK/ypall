@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  justify-content: space-around;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-top: 23px;
+  .header-logo {
+    width: 129px;
+    height: 106px;
+  }
+  .menu ul {
+    text-decoration: none;
+    list-style-type: none;
+    margin-right: 284px;
+    margin-top: 52px;
+  }
+  .menu ul li {
+    display: inline-block;
+    margin-left: 81px;
+  }
+  .menu ul li a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+    font-family: 'Futura', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .menu ul li a:hover {
+    color: red;
+  }
+  .dark {
+    display: flex;
+    width: 101px;
+    height: 92px;
+  }
+  .theme {
+    display: flex;
+    gap: 45px;
+  }
+  .header-logotype-name {
+    display: flex;
+    align-items: center;
+  }
+}
