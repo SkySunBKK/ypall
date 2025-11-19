@@ -5,6 +5,108 @@
     <title>Title</title>
 </head>
 <body>
+<style>
+    /* --- Базовые стили --- */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        padding: 20px;
+        min-height: 100vh;
+    }
 
-</body>
-</html>
+    /* Светлая тема (по умолчанию) */
+    body.light-theme {
+        background-color: #ffffff;
+        color: #333333;
+    }
+
+    /* Тёмная тема */
+    body.dark-theme {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+
+    /* Стили для компонента переключателя */
+    .theme-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 12px;
+        background-color: var(--bg-secondary, #f0f0f0);
+        border-radius: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+        transform: scale(1.05);
+    }
+
+    .theme-toggle-icon {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+    }
+
+    /* Иконки: можно заменить на SVG или использовать символы */
+    .icon-sun::before {
+        content: "☀️";
+    }
+
+    .icon-moon::before {
+        content: "🌙";
+    }
+
+    /* Чтобы иконка обновлялась через JS — можно использовать SVG или менять класс */
+</style>
+</head>
+<body class="light-theme">
+
+<!-- Контент сайта -->
+<h1>Пример контента</h1>
+<p>Этот сайт поддерживает тёмную и светлую тему.</p>
+
+<!-- Компонент переключения темы -->
+<div class="theme-toggle" id="themeToggle">
+    <span class="icon-sun" id="sunIcon"></span>
+    <span class="icon-moon" id="moonIcon" style="display:none;"></span>
+</div>
+
+<script>
+    // Получаем элементы
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+
+    // Проверяем сохранённую тему из localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.replace('light-theme', 'dark-theme');
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'inline';
+    }
+
+    // Обработчик клика
+    themeToggle.addEventListener('click', () => {
+        if (body.classList.contains('light-theme')) {
+            // Переключаемся на тёмную
+            body.classList.replace('light-theme', 'dark-theme');
+            localStorage.setItem('theme', 'dark');
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'inline';
+        } else {
+            // Переключаемся на светлую
+            body.classList.replace('dark-theme', 'light-theme');
+            localStorage.setItem('theme', 'light');
+            moonIcon.style.display = 'none';
+            sunIcon.style.display = 'inline';
+        }
+    });
+</script>
