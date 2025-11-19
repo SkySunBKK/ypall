@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/main.css">
-    <title>Document</title>
+    <title>Главная</title>
 </head>
 <body>
 <header class="header">
     <div class="header-logotype-name">
         <picture>
-            <img src="./assets/images/logotype.png" class="header-logo">
+            <img src="./assets/images/logotype.webp" class="header-logo">
         </picture>
     </div>
     <nav class="menu">
         <ul>
-            <li><a href="/index.html">Главная</a></li>
+            <li><div class="head-ul"><a href="/index.html">Главная</a></div></li>
             <li><a href="/shop.html">О Нас</a></li>
             <li><a href="/cart.html">Контакты</a></li>
             <li><a href="/contact.html">Меню</a></li>
@@ -27,6 +27,31 @@
                 <img src="./assets/images/theme.webp" class="dark">
             </picture></a>
 </div></header>
+<div class="hero">
+    <picture class="hero__image">
+        <source srcset="./assets/images/hero-baner-fone.webp-mobile" media="(max-width: 480px)">
+        <source srcset="./assets/images/hero-baner-fone.webp-tablet" media="(max-width: 800px)">
+        <img src="./assets/images/hero-baner-fone.webp" class="hero__img">
+    </picture>
+    <div class="hero__content">
+        <h1 class="hero__title">ДОБРО ПОЖАЛОВАТЬ В <br>РЕСТОРАН ЭКЗОТИЧЕСКОЙ КУХНИ <br>САБОТАЖ ВКУСА</h1>
+        <button class="hero__button" style="padding: 19px 59px;
+            border-radius: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 40px;
+            border: none;">Открыть меню</button>
+    </div>
+</div>
+<section class="section-about">
+    <div class="about-name"><h1>О нас</h1></div>
+    <div class="about-text">
+        Ресторан, где ваш прошлый гастрономический опыт не имеет <br>
+        значения. Мы специализируемся на экзотической кухне, которая <br>
+        бросает вызов вашим рецепторам. Забудьте всё, что вы знали о <br>
+        вкусе. Доверьтесь нам.
+    </div>
+</section>
 <h1>Карточки</h1>
 
 <div class="card">

@@ -3,18 +3,23 @@
   align-items: center;
   height: 100px;
   justify-content: space-around;
-  margin-right: 100px;
-  margin-left: 100px;
+  margin-right: 116px;
+  margin-left: 116px;
   margin-top: 23px;
   .header-logo {
     width: 129px;
     height: 106px;
+    margin-right: -81px;
   }
   .menu ul {
     text-decoration: none;
     list-style-type: none;
-    margin-right: 284px;
     margin-top: 52px;
+    margin-left: 284px;
+    margin-right: 284px;
+  }
+  .head-ul {
+    margin-left: -41px;
   }
   .menu ul li {
     display: inline-block;

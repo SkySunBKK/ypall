@@ -1,0 +1,24 @@
+body {
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-name {
+  margin-top: -16px;
+  text-decoration: none;
+  color: black;
+  font-family: 'Futura', sans-serif;
+  font-size: 48px;
+}
+.about-text {
+  margin-top: -32px;
+  text-decoration: none;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  text-align: center;
+}

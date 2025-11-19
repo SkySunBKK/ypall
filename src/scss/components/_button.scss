@@ -1,0 +1,10 @@
+button {
+  color: white;
+  font-size: 40px;
+  font-family: "Futura", sans-serif;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background-color: #D7A761;
+  transform: translateY(-5px);
+}

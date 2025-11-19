@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="hero">
+    <picture class="hero__image">
+        <source srcset="@@img-mobile" media="(max-width: 480px)">
+        <source srcset="@@img-tablet" media="(max-width: 800px)">
+        <img src="@@img" class="hero__img">
+    </picture>
+    <div class="hero__content">
+        <h1 class="hero__title">@@title</h1>
+        <button class="hero__button" style="
+            padding: @@button-padding-y @@button-padding-x;
+            border-radius: @@button-border-radius;
+            background-color: @@button-color;
+            color: @@button-text-color;
+            font-size: @@button-font-size;
+            border: @@button-border;
+        ">@@button-text</button>
+    </div>
+</div>
