@@ -2,9 +2,120 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>О Нас</title>
 </head>
 <body>
-
+@@include('../components/_header.html',)
+@@include('..\components\_hero_banner.html', {
+"img": "./assets/images/banner-two.webp",
+"title": "ИСТОРИЯ НАШЕГО <br>РЕСТОРАНА",
+"button-text": "Читать",
+"button-padding-x": "59px",
+"button-padding-y": "19px",
+"button-border-radius": "12px",
+"button-color": "var(--primary-color)",
+"button-font-size": "40px",
+"button-border": "none",
+"button-text-color": "white",
+"margin": "138px",
+})
+<div class="advantage-name-head">ИСТОРИЯ: ЗАРОЖДЕНИЕ САБОТАЖА</div>
+<section class="history">
+    Наш ресторан родился не из желания накормить, а из желания взбунтовать. <br>
+    Основатель и главный идеолог, Освальд Маккинли, всегда считал, что <br>
+    современная гастрономия слишком предсказуема. В 2023 году он собрал <br>
+    команду единомышленников - «диверсантов» — шеф-повара, сомелье и <br>
+    художников, которые устали от шаблонов.<br>
+    «Саботаж вкуса» — это наша декларация независимости от кулинарной рутины.<br>
+    Мы начали как маленький экспериментальный проект, а сегодня стали точкой <br>
+    сбора для тех, кто ищет не просто ужин, а гастрономическое потрясение.
+</section>
+<div class="advantage-name-head">МИССИЯ: НАШ САБОТАЖ</div>
+<section class="history">
+    Мы объявили войну вкусовой скуке. Наша миссия — целенаправленно и <br>
+    изящно «ломать» гастрономические стереотипы наших гостей. Мы не готовим <br>
+    блюда — мы создаем многоуровневый опыт, где каждый элемент, от интерьера <br>
+    до подачи, заставляет пересмотреть привычное понятие «вкусно».<br>
+    Мы верим, что за пределами зоны комфорта начинается настоящее вкусовое <br>
+    приключение.
+</section>
+<div class="advantage-name-head">КОМАНДА: ШТАБ САБОТАЖА</div>
+<section class="staff">
+    @@include('../components/_card.html', {
+    "title": "Агюста Гюсто",
+    "img": "./assets/images/staff-one.webp",
+    "text": "Шеф-Диверсант",
+    "textd": "Наш главный стратег. Его кулинарное кредо: «Если вкус не вызывает вопроса — это не блюдо «Саботажа».",
+    })
+    @@include('../components/_card.html', {
+    "title": "Бартисто Бардо",
+    "img": "./assets/images/staff-two.webp",
+    "text": "Бармен-Подрывник",
+    "textd": "Сообщник шефа в мире напитков. Он создает коктейли, которые дополняют вкус блюд.",
+    })
+    @@include('../components/_card.html', {
+    "title": "Мэрлин Киро",
+    "img": "./assets/images/staff-three.webp",
+    "text": "Глава Службы Безопасности Вкуса",
+    "textd": "Наш управляющий. Она и её команда официантов обеспечивают безупречный сервис.",
+    })
+</section>
+<div class="advantage-name-head">ПРИНЦИПЫ: КОДЕКС ДИВЕРСАНТА</div>
+<section class="principles">
+    <div class="provocation-card">
+        <div class="provocation-card__number">1</div>
+        <div class="provocation-card__content">
+            <p class="provocation-card__text">
+                <b>Провокация как искусство.</b> Мы не шокируем ради шока.
+                Мы создаем интеллектуальный вызов для ваших рецепторов.
+            </p>
+        </div>
+    </div>
+    <div class="provocation-card">
+        <div class="provocation-card__number">2</div>
+        <div class="provocation-card__content">
+            <p class="provocation-card__text">
+                <b>Исследование без границ.</b> Наша кухня — это плавильный котел культур и техник. От Амазонии до ЮВА.
+            </p>
+        </div>
+    </div>
+    <div class="provocation-card">
+        <div class="provocation-card__number">3</div>
+        <div class="provocation-card__content">
+            <p class="provocation-card__text">
+                <b>Осознанная этичность.</b> Наш саботаж направлен против скуки, а не против природы.
+            </p>
+        </div>
+    </div>
+    <div class="provocation-card">
+        <div class="provocation-card__number">4</div>
+        <div class="provocation-card__content">
+            <p class="provocation-card__text">
+                <b>Тотальное погружение.</b> Саботаж не заканчивается на тарелке. Интерьер, музыка, свет и сервис — часть нашего перформанса.
+            </p>
+        </div>
+    </div>
+</section>
+<div class="advantage-name-head">ГАЛЕРЕЯ</div>
+<div class="gallery-grid">
+    <div class="gallery-grid__item gallery-grid__item--left">
+        <img src="../assets/images/gallery_one.webp" alt="Интерьер ресторана" class="gallery-grid__image">
+    </div>
+    <div class="gallery-grid__item gallery-grid__item--top-right">
+        <img src="../assets/images/gallery_two.webp" alt="Яркое блюдо с лобстером" class="gallery-grid__image">
+    </div>
+    <div class="gallery-grid__item gallery-grid__item--middle-right">
+        <img src="../assets/images/gallery_three.webp" alt="Морепродукты на банановом листе" class="gallery-grid__image">
+    </div>
+    <div class="gallery-grid__item gallery-grid__item--bottom-right">
+        <img src="images/../assets/images/gallery_five.webp" alt="Пад Тай с креветками" class="gallery-grid__image">
+    </div>
+    <div class="gallery-grid__item gallery-grid__item--bottom-left">
+        <img src="../assets/images/gallery_four.webp" alt="Золотой трофей и диплом" class="gallery-grid__image">
+    </div>
+</div>
+@@include('../components/_footer.html', {
+})
 </body>
 </html>

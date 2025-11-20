@@ -58,8 +58,8 @@
     <nav class="menu">
         <ul>
             <li><a href="/index.html">Главная</a></li>
-            <li><a href="/shop.html">О Нас</a></li>
-            <li><a href="/cart.html">Контакты</a></li>
+            <li><a href="/about_page.html">О Нас</a></li>
+            <li><a href="/contacts_page.html">Контакты</a></li>
             <li><a href="/contact.html">Меню</a></li>
         </ul>
     </nav>
@@ -122,6 +122,23 @@
 </script>
     </div>
 </header>
+<script>
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        mobileMenu.classList.toggle('open');
+    });
+
+    // Закрытие меню при клике на ссылку
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burger.classList.remove('active');
+            mobileMenu.classList.remove('open');
+        });
+    });
+</script>
 <div class="hero">
     <picture class="hero__image">
         <source srcset="./assets/images/hero-baner-fone.webp-mobile" media="(max-width: 480px)">
@@ -135,7 +152,8 @@
             background-color: var(--primary-color);
             color: white;
             font-size: 40px;
-            border: none;">Открыть меню</button>
+            border: none;
+            margin-top: @@margin;">Открыть меню</button>
     </div>
 </div>
 <section class="section-about">
@@ -440,22 +458,5 @@
             </defs>
         </svg>
 </div>
-<script>
-    const burger = document.getElementById('burger');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    burger.addEventListener('click', () => {
-        burger.classList.toggle('active');
-        mobileMenu.classList.toggle('open');
-    });
-
-    // Закрытие меню при клике на ссылку
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            burger.classList.remove('active');
-            mobileMenu.classList.remove('open');
-        });
-    });
-</script>
 </body>
 </html>
