@@ -1,10 +1,10 @@
 .advantage-card {
   border-radius: 12px;
-  background-color: #ffffff;
+  background-color: var(--card-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 .advantage-name-head {
-  color: #000000;
+  color: var(--text-color);
   font-size: 48px;
   font-family: "Futura PT Bold", sans-serif;
   font-weight: bold;
@@ -12,14 +12,14 @@
 
 }
 .advantage-name {
-  color: #000000;
+  color: var(--text-color);
   font-size: 40px;
   font-family: "Futura PT Bold", sans-serif;
   font-weight: bold;
   margin-top: 11px;
 }
 .advantage-text {
-  color: #000000;
+  color: var(--text-color);
   font-size: 32px;
   font-family: "Montserrat", sans-serif;
   margin-top: 15px;

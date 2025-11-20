@@ -1,112 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<style>
-    /* --- Базовые стили --- */
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        padding: 20px;
-        min-height: 100vh;
-    }
-
-    /* Светлая тема (по умолчанию) */
-    body.light-theme {
-        background-color: #ffffff;
-        color: #333333;
-    }
-
-    /* Тёмная тема */
-    body.dark-theme {
-        background-color: #1a1a1a;
-        color: #e0e0e0;
-    }
-
-    /* Стили для компонента переключателя */
-    .theme-toggle {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 8px 12px;
-        background-color: var(--bg-secondary, #f0f0f0);
-        border-radius: 20px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        user-select: none;
-        transition: all 0.3s ease;
-    }
-
-    .theme-toggle:hover {
-        transform: scale(1.05);
-    }
-
-    .theme-toggle-icon {
-        width: 20px;
-        height: 20px;
-        fill: currentColor;
-    }
-
-    /* Иконки: можно заменить на SVG или использовать символы */
-    .icon-sun::before {
-        content: "☀️";
-    }
-
-    .icon-moon::before {
-        content: "🌙";
-    }
-
-    /* Чтобы иконка обновлялась через JS — можно использовать SVG или менять класс */
-</style>
-</head>
-<body class="light-theme">
-
-<!-- Контент сайта -->
-<h1>Пример контента</h1>
-<p>Этот сайт поддерживает тёмную и светлую тему.</p>
-
-<!-- Компонент переключения темы -->
-<div class="theme-toggle" id="themeToggle">
-    <span class="icon-sun" id="sunIcon"></span>
-    <span class="icon-moon" id="moonIcon" style="display:none;"></span>
+<!-- theme-toggle.html -->
+<div class="header-theme" id="themeToggle" aria-label="Переключить тему">
+    <svg width="102" height="92" viewBox="0 0 102 92" xmlns="http://www.w3.org/2000/svg">
+        <path d="M48.1944 36.8L53.7742 21.9052L64.2944 18.4L53.7788 14.8948L48.1944 0L42.61 14.8948L32.0944 18.4L42.61 21.9052L48.1944 36.8Z" fill="currentColor"/>
+        <path d="M27.6001 48.3C27.6001 44.1324 28.8375 40.25 30.9535 37.0024C29.8541 36.869 28.7363 36.8 27.6001 36.8C25.0747 36.8 22.6321 37.1358 20.3091 37.7752C8.60212 40.9722 0.00012207 51.6764 0.00012207 64.4C0.00012207 79.6352 12.3603 92 27.6001 92C41.6623 92 53.2635 81.489 54.9839 67.9006C52.8863 68.6136 50.6415 69 48.3001 69C36.8737 69 27.6001 59.7264 27.6001 48.3Z" fill="currentColor"/>
+        <path d="M66.5943 36.8L61.0099 51.6948L50.4943 55.2L61.0099 58.7052L66.5943 73.6L72.1787 58.7052L82.6943 55.2L72.1787 51.6948L66.5943 36.8Z" fill="currentColor"/>
+        <path d="M93.5824 24.9734L89.5942 13.8L85.606 24.9734L78.0942 27.6L85.606 30.2266L89.5942 41.4L93.5824 30.2266L101.094 27.6L93.5824 24.9734Z" fill="currentColor"/>
+    </svg>
 </div>
 
 <script>
-    // Получаем элементы
-    const themeToggle = document.getElementById('themeToggle');
-    const body = document.body;
-    const sunIcon = document.getElementById('sunIcon');
-    const moonIcon = document.getElementById('moonIcon');
+    // Уникальная защита от дублирования скрипта
+    if (typeof window.themeToggleScriptLoaded === 'undefined') {
+        window.themeToggleScriptLoaded = true;
 
-    // Проверяем сохранённую тему из localStorage
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        body.classList.replace('light-theme', 'dark-theme');
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'inline';
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('themeToggle');
+            const body = document.body;
+
+            // Проверяем, есть ли toggle
+            if (!themeToggle) {
+                console.warn('Элемент #themeToggle не найден');
+                return;
+            }
+
+            // Проверяем сохранённую тему
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+            }
+
+            // Переключение при клике
+            themeToggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                if (body.classList.contains('light-theme')) {
+                    body.classList.replace('light-theme', 'dark-theme');
+                    localStorage.setItem('theme', 'dark');
+                    console.log('Тема: тёмная');
+                } else {
+                    body.classList.replace('dark-theme', 'light-theme');
+                    localStorage.setItem('theme', 'light');
+                    console.log('Тема: светлая');
+                }
+            });
+        });
     }
-
-    // Обработчик клика
-    themeToggle.addEventListener('click', () => {
-        if (body.classList.contains('light-theme')) {
-            // Переключаемся на тёмную
-            body.classList.replace('light-theme', 'dark-theme');
-            localStorage.setItem('theme', 'dark');
-            sunIcon.style.display = 'none';
-            moonIcon.style.display = 'inline';
-        } else {
-            // Переключаемся на светлую
-            body.classList.replace('dark-theme', 'light-theme');
-            localStorage.setItem('theme', 'light');
-            moonIcon.style.display = 'none';
-            sunIcon.style.display = 'inline';
-        }
-    });
+    // else: скрипт уже загружен
 </script>

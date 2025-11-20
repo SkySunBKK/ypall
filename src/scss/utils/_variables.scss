@@ -13,7 +13,16 @@
   /**  Основные цвета */
   --main-color: #ffffff;
   --primary-color: #D7A761;
-
+  body.dark-theme {
+    --body: #1E1E1E;
+    --text-color: #ffffff;
+    --card-color: #383636;
+  }
+  body.light-theme {
+    --body: #FFF4DA;
+    --text-color: #000000;
+    --card-color: #ffffff;
+  }
   /**  Шрифты */
   --font-family-title: "Open Sans";
 }
