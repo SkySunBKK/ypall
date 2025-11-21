@@ -28,23 +28,19 @@
             </svg>
         </div>
     </div>
-    <!-- 2. Бургер (будет по центру на мобильных) -->
     <div class="burger-menu" id="burger">
         <span></span>
         <span></span>
         <span></span>
     </div>
-
-    <!-- 3. Мобильное меню -->
     <nav class="menu-mobile" id="mobileMenu">
         <ul>
             <li><a href="/index.html">Главная</a></li>
-            <li><a href="/shop.html">О Нас</a></li>
-            <li><a href="/cart.html">Контакты</a></li>
-            <li><a href="/contact.html">Меню</a></li>
+            <li><a href="/about_page.html">О Нас</a></li>
+            <li><a href="/contacts_page.html">Контакты</a></li>
+            <li><a href="/menu_page.html">Меню</a></li>
         </ul>
     </nav>
-    <!-- Десктопное меню -->
     <nav class="menu">
         <ul>
             <li><a href="/index.html">Главная</a></li>
@@ -53,8 +49,6 @@
             <li><a href="/menu_page.html">Меню</a></li>
         </ul>
     </nav>
-
-    <!-- Кнопка темы -->
     <div class="header-theme">
         @@include('../components/_theme.html')
     </div>
@@ -68,7 +62,6 @@
         mobileMenu.classList.toggle('open');
     });
 
-    // Закрытие меню при клике на ссылку
     mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             burger.classList.remove('active');

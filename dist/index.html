@@ -38,23 +38,19 @@
             </svg>
         </div>
     </div>
-    
     <div class="burger-menu" id="burger">
         <span></span>
         <span></span>
         <span></span>
     </div>
-
-    
     <nav class="menu-mobile" id="mobileMenu">
         <ul>
             <li><a href="/index.html">Главная</a></li>
-            <li><a href="/shop.html">О Нас</a></li>
-            <li><a href="/cart.html">Контакты</a></li>
-            <li><a href="/contact.html">Меню</a></li>
+            <li><a href="/about_page.html">О Нас</a></li>
+            <li><a href="/contacts_page.html">Контакты</a></li>
+            <li><a href="/menu_page.html">Меню</a></li>
         </ul>
     </nav>
-    
     <nav class="menu">
         <ul>
             <li><a href="/index.html">Главная</a></li>
@@ -63,8 +59,6 @@
             <li><a href="/menu_page.html">Меню</a></li>
         </ul>
     </nav>
-
-    
     <div class="header-theme">
         
 <div class="header-theme" id="themeToggle" aria-label="Переключить тему">
@@ -131,7 +125,6 @@
         mobileMenu.classList.toggle('open');
     });
 
-    // Закрытие меню при клике на ссылку
     mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             burger.classList.remove('active');
@@ -147,13 +140,7 @@
     </picture>
     <div class="hero__content">
         <h1 class="hero__title">ДОБРО ПОЖАЛОВАТЬ В <br>РЕСТОРАН ЭКЗОТИЧЕСКОЙ КУХНИ <br>САБОТАЖ ВКУСА</h1>
-        <button class="hero__button" style="padding: 19px 59px;
-            border-radius: 12px;
-            background-color: var(--primary-color);
-            color: white;
-            font-size: 40px;
-            border: none;
-            margin-top: @@margin;">Открыть меню</button>
+        <button class="hero__button">Открыть меню</button>
     </div>
 </div>
 <section class="section-about">
@@ -173,7 +160,6 @@
             padding-top: 27px;
             padding-bottom: 104px;
             background-color: var(--card-color);
-            box-shadow: 0 4px 12px ;
             text-align: center;
             max-width: 530px;
             margin: 0 auto;">
@@ -189,7 +175,6 @@
             padding-top: 27px;
             padding-bottom: 104px;
             background-color: var(--card-color);
-            box-shadow: 0 4px 12px ;
             text-align: center;
             max-width: 530px;
             margin: 0 auto;">
@@ -205,7 +190,6 @@
             padding-top: 27px;
             padding-bottom: 104px;
             background-color: var(--card-color);
-            box-shadow: 0 4px 12px ;
             text-align: center;
             max-width: 530px;
             margin: 0 auto;">
