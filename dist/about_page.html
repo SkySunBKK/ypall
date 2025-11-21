@@ -342,21 +342,5 @@
             </defs>
         </svg>
 </div>
-<script>
-    const burger = document.getElementById('burger');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    burger.addEventListener('click', () => {
-        burger.classList.toggle('active');
-        mobileMenu.classList.toggle('open');
-    });
-
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            burger.classList.remove('active');
-            mobileMenu.classList.remove('open');
-        });
-    });
-</script>
 </body>
 </html>
