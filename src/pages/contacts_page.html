@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Контакты</title>
 </head>
 <body>
+@@include('../components/_header.html',)
+@@include('../components/_feedback.html',)
+<!-- components/_contacts-block.html -->
+<div class="contacts-block">
+    <!-- Левая часть — контакты -->
+    <div class="contacts-block__info">
+        <h3>Контакты</h3>
+        <p>Нижний Новгород,<br>улица Минина, 12Б</p>
+        <p>43-11-120</p>
+        <p>+7 930 287-12-34</p>
+        <p>sabotaj-nn@gmail.ru</p>
+        <div class="contacts-block__social">
+            <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_200_96)">
+                    <path d="M33.572 70.0278H36.491C52.36 70.0278 60.263 70.0278 65.163 65.1278C70.035 60.2278 70.035 52.2968 70.035 36.4838V33.5088C70.035 17.7588 70.035 9.82783 65.163 4.92783C60.263 0.027832 52.332 0.027832 36.491 0.027832H33.572C17.703 0.027832 9.79997 0.027832 4.89997 4.92783C0.0349731 9.82783 0.0349731 17.7658 0.0349731 33.5718V36.5468C0.0349731 52.2968 0.0349731 60.2278 4.93497 65.1278C9.83497 70.0278 17.766 70.0278 33.572 70.0278Z" fill="#0077FF"/>
+                    <path d="M37.282 50.4558C21.329 50.4558 12.229 39.5218 11.851 21.3218H19.845C20.111 34.6778 25.998 40.3408 30.667 41.5028V21.3218H38.192V32.8438C42.798 32.3468 47.642 27.0968 49.273 21.3218H56.798C55.552 27.3768 51.842 32.6408 46.557 35.8468C52.458 38.7798 56.819 44.0998 58.541 50.4558H50.26C48.699 44.8698 43.939 40.7678 38.185 40.0398V50.4558H37.282Z" fill="white"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_200_96">
+                        <rect width="70" height="70" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+    </div>
 
+    <!-- Правая часть — карта -->
+    <div class="contacts-block__map">
+        <img src="../assets/images/map_comp.webp" alt="Карта проезда до ресторана" class="contacts-block__map-image">
+    </div>
+</div>
+@@include('../components/_footer.html', {
+})
 </body>
 </html>

@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div class="contact-form-block">
+    <!-- Левая часть — изображение -->
+    <div class="contact-form-block__image-wrapper">
+        <img src="../assets/images/form_image.webp" alt="Вкусное блюдо" class="contact-form-block__image">
+    </div>
 
-</body>
-</html>
+    <!-- Правая часть — форма -->
+    <div class="contact-form-block__form">
+        <h3>Введите свои данные и наш менеджер свяжется с Вами</h3>
+        <form id="contactForm">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Ваше Имя" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="question" name="question" placeholder="Возникший вопрос" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="source" name="source" placeholder="Откуда узнали о нас?" required>
+            </div>
+            <div class="form-checkbox">
+                <label>
+                    <input type="checkbox" id="consent" name="consent" required>
+                    Я соглашаюсь с <a href="/privacy-policy.html" target="_blank">политикой конфиденциальности</a>
+                </label>
+            </div>
+            @@include('./_button.html', {
+            "padding-x": "59px",
+            "padding-y": "19px",
+            "border-radius": "12px",
+            "title": "Отправить",
+            "text-color": "white"
+            })
+        </form>
+    </div>
+</div>
