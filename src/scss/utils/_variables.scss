@@ -17,11 +17,13 @@
     --body: #1E1E1E;
     --text-color: #ffffff;
     --card-color: #383636;
+    --card-color-rgb: 56, 54, 54;
   }
   body.light-theme {
     --body: #FFF4DA;
     --text-color: #000000;
     --card-color: #ffffff;
+    --card-color-rgb: 254, 254, 254;
   }
   /**  Шрифты */
   --font-family-title: "Open Sans";

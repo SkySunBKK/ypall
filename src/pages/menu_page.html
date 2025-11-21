@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Меню</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
+@@include('../components/_header.html',)
+<div class="advantage-name-head">КАТЕГОРИИ БЛЮД</div>
 
+<div class="menu-cards-block">
+    <div class="menu-bg-image">
+    <img src="../assets/images/menu_fone.webp" alt="Фоновое изображение интерьера" class="menu-bg-image__img">
+    </div>
+    @@include('../components/_menu_card.html', {
+    "img": "../assets/images/menu_one.webp",
+    "text": "Основной саботаж",
+    })
+    @@include('../components/_menu_card.html', {
+    "img": "../assets/images/menu_two.webp",
+    "text": "Первый контакт",
+    })
+    @@include('../components/_menu_card.html', {
+    "img": "../assets/images/menu_three.webp",
+    "text": "Контр-агенты",
+    })
+    @@include('../components/_menu_card.html', {
+    "img": "../assets/images/menu_four.webp",
+    "text": "Диверсия для смелых",
+    })
+    @@include('../components/_menu_card.html', {
+    "img": "../assets/images/menu_five.webp",
+    "text": "Сладкий подрыв",
+    })
+    @@include('../components/_menu_card.html', {
+    "img": "../assets/images/menu_six.webp",
+    "text": "Коктейльные операции",
+    })
+</div>
+@@include('../components/_footer.html', {
+})
 </body>
 </html>
