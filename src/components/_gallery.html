@@ -7,18 +7,13 @@
             --gallery-btn-size: @@btn-size;
             --gallery-bg: @@background-color;">
     <div class="gallery__container">
-        <!-- Контейнер изображения -->
         <img src="@@img1" alt="Слайд" class="gallery__slide" id="currentSlide">
-
-        <!-- Кнопки -->
         <button class="gallery__btn gallery__btn--prev">
             <svg width="12" height="18" viewBox="0 0 12 18"><path d="M10 1L2 9L10 17" stroke="white" stroke-width="2"/></svg>
         </button>
         <button class="gallery__btn gallery__btn--next">
             <svg width="12" height="18" viewBox="0 0 12 18"><path d="M2 1L10 9L2 17" stroke="white" stroke-width="2"/></svg>
         </button>
-
-        <!-- Точки -->
         <div class="gallery__dots">
             <span class="gallery__dot active" data-index="0"></span>
             <span class="gallery__dot" data-index="1"></span>
@@ -75,7 +70,6 @@
                 });
             });
 
-            // Инициализация
             updateSlider();
         });
     });

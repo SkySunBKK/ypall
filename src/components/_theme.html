@@ -1,4 +1,3 @@
-<!-- theme-toggle.html -->
 <div class="header-theme" id="themeToggle" aria-label="Переключить тему">
     <svg width="102" height="92" viewBox="0 0 102 92" xmlns="http://www.w3.org/2000/svg">
         <path d="M48.1944 36.8L53.7742 21.9052L64.2944 18.4L53.7788 14.8948L48.1944 0L42.61 14.8948L32.0944 18.4L42.61 21.9052L48.1944 36.8Z" fill="currentColor"/>
@@ -9,7 +8,6 @@
 </div>
 
 <script>
-    // Уникальная защита от дублирования скрипта
     if (typeof window.themeToggleScriptLoaded === 'undefined') {
         window.themeToggleScriptLoaded = true;
 
@@ -17,13 +15,11 @@
             const themeToggle = document.getElementById('themeToggle');
             const body = document.body;
 
-            // Проверяем, есть ли toggle
             if (!themeToggle) {
                 console.warn('Элемент #themeToggle не найден');
                 return;
             }
 
-            // Проверяем сохранённую тему
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
                 body.classList.remove('light-theme');
@@ -33,7 +29,6 @@
                 body.classList.add('light-theme');
             }
 
-            // Переключение при клике
             themeToggle.addEventListener('click', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -50,5 +45,4 @@
             });
         });
     }
-    // else: скрипт уже загружен
 </script>
